@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    
+    <header class="header">
+        <img src="images/logo.png" id="logo" alt="">
+
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menubar" class="fas fa-bars"></div>
+            <a href="#">contact</a>
+        </div>
+    </header>
+
+    <div class="background-image">
+        <div class="background-content">
+            <h1>provide an exceptional <br> patient experience</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessit<br>atibus reiciendis eos saepe vitae quibusdam corrupti ip<br> ipsa asperiores reprehenderit </p>
+            <a href="#">Read more</a>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="main-about">
+            <div class="inner-about">
+                <div class="about-content">
+                    <h1>about us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, consequuntur harum beatae inventore voluptatem numquam voluptatibus fuga, cupiditate cumque porro perferendis tempora, adipisci culpa odio molestias dolorem blanditiis quos ad!</p>
+                <a href="#">Read more</a>
+                </div>
+                
+            </div>
+            <div class="inner-about">
+                <div class="inner-about-image">
+                    <img src="images/chiness.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services">
+        <div class="service-content">
+            <div class="left-service-content">
+                <h1>Our special services</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis animi similique perspiciatis, impedit blanditiis itaque consequuntur laboriosam ipsa asperiores?</p>
+            </div>
+
+            <div class="right-service-content">
+                <div class="right-btn">
+                    <a href="#">See all services</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-services">
+            <div class="inner-services-content">
+                <div class="service-icon">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+                <h2>health care</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum corporis impedit nam quaerat vitae incidunt aspernatur, conseq</p>
+
+            </div>
+
+            <div class="inner-services-content">
+                <div class="service-icon">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+                <h2>health care</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum corporis impedit nam quaerat vitae incidunt aspernatur, conseq</p>
+                
+            </div>
+
+            <div class="inner-services-content">
+                <div class="service-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h2>health care</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum corporis impedit nam quaerat vitae incidunt aspernatur, conseq</p>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        body > table{
+     width: 100%;
+ }
+ 
+ table{
+     border-collapse: collapse;
+     text-align: center;
+ }
+ table.list{
+     width:100%;
+     text-align: center;
+ }
+ table.list td{
+     text-align: center;
+ }
+ td, th {
+     border: 1px solid #dddddd;
+     text-align: left;
+     padding: 8px;
+ }
+ tr:nth-child(even),table.list thead>tr {
+     background-color: skyblue;
+ }
+ input[type=text], input[type=number] {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+ input[type=submit]{
+     width: 30%;
+     background-color: #ddd;
+     color: #000;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+ form{
+     background-color: skyblue;
+     padding: 10px;
+ 
+ }
+ form div.form-action-buttons{
+     text-align: center;
+ 
+ }
+ a{
+     cursor: pointer;
+     text-decoration: underline;
+     color: #0000ee;
+     margin-right: 4px;
+ }
+ label.validation-error{
+     color:   red;
+     margin-left: 5px;
+ }
+ .hide{
+     display:none;
+ }
+    </style>
+</head>
+
+    <body style="background-color: skyblue">
+        <CENTER><h2>Simple Student Records</h2></CENTER>
+        <!--Table-->
+        <table>
+            <!--Row-1-->
+            <tr>
+                <!--Column-1-->
+                <td>
+                    <!--Form-->
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <h3>Student Form</h3>
+                      <!--div-1-->
+                        <div>
+                            <label>Full Name</label>
+                            <!--Validation Error-->
+                            <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                            <!--Input User Name-->
+                            <input type="text" name="userName" id="userName" placeholder="Enter the user Name">
+                        </div>
+                        <!--div-2-->
+                        <div>
+                            <label>Rollno</label>
+                            <!--Validation Error-->
+                            <label class="validation-error hide" id="rollNovalidationError" >This field is required</label>
+                            <!--Input Roll No-->
+                            <input type="text" name="rollNo" id="rollNo" placeholder="Enter the Roll number">
+                        </div>
+                        <!--div-3-->
+                        <div>
+                            <label>Student Class</label>
+                            <!--Validation Error-->
+                            <label class="validation-error hide" id="stdClassvalidationError">This field is required</label>
+                           <!--Input Student Class-->
+                            <input type="text" name="stdClass" id="stdClass" placeholder="Enter the Student Class">
+                        </div>
+                        <!--div-4-->
+                        <div>
+                            <label>Total Subject</label>
+                            <!--Validation Error-->
+                            <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                            <!--Input Total Subject-->
+                            <input type="number" name="tsub" id="tsub" placeholder="Enter the Total Subjects">
+                        </div>
+                        <!--div-5-->
+                        <div>
+                            <label>Age</label>
+                            <!--Validation Error-->
+                            <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                            <!--Input Age-->
+                            <input type="number" name="age" id="age" placeholder="Enter the Age">
+                        </div>
+                        <!--div-6-->
+                        <div class="form-action-buttons">
+                            <!--Input Button-->
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </td>
+                <!--Column-2-->
+                <td>
+                    <!--Nested Table-->
+                    <table class="list" id="stdlist" style="background-color: #C2976D;">
+                        <!--Table Head-->
+                        <thead>
+                            <!--Row-2-->
+                            <tr>
+                                <th>Full Name</th>
+                                <th> Roll no</th>
+                                <th>Class</th>
+                                <th>Total Subject</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <!--Table Body-->
+                        <tbody>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <button onclick="window.print()"><strong>Print this page</strong></button>
+
+    
+</body>
+<script>
+    var selectedRow = null
+
+// Form Submit Function
+function onFormSubmit() {
+ // check validity
+ if (validate()) {
+     // store user data
+     var formData = readFormData();
+     // check empty row
+     if (selectedRow == null)
+     {
+         // Insert New User Record
+         insertNewRecord(formData);
+     }
+     else
+     {
+         // Update New User Record
+         updateRecord(formData);
+     }
+     // Reset Input Values
+     resetForm();
+ }
+}
+// Get Values From Form
+function readFormData() {
+ var formData = {};
+ // Get Values From  Input
+ formData["userName"] = document.getElementById("userName").value;
+ formData["rollNo"] = document.getElementById("rollNo").value;
+ formData["stdClass"] = document.getElementById("stdClass").value;
+ formData["tsub"] = document.getElementById("tsub").value;
+ formData["age"] = document.getElementById("age").value;
+ // return Form Data
+ return formData;
+}
+// Insert New User Record
+function insertNewRecord(data) {
+ var table = document.getElementById("stdlist").getElementsByTagName('tbody')[0];
+ var newRow = table.insertRow(table.length);
+ cell1 = newRow.insertCell(0);
+ cell1.innerHTML = data.userName;
+ cell2 = newRow.insertCell(1);
+ cell2.innerHTML = data.rollNo;
+ cell3 = newRow.insertCell(2);
+ cell3.innerHTML = data.stdClass;
+ cell4 = newRow.insertCell(3);
+ cell4.innerHTML = data.tsub;
+ cell5 = newRow.insertCell(4);
+ cell5.innerHTML = data.age;
+ cell5 = newRow.insertCell(5);
+ cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+ <a onClick="onDelete(this)">Delete</a>`;
+}
+// Reset Function
+function resetForm() {
+ document.getElementById("userName").value = "";
+ document.getElementById("rollNo").value = "";
+ document.getElementById("stdClass").value = "";
+ document.getElementById("tsub").value = "";
+ document.getElementById("age").value = "";
+ selectedRow = null;
+}
+// Edit Function
+function onEdit(td) {
+ selectedRow = td.parentElement.parentElement;
+ document.getElementById("userName").value = selectedRow.cells[0].innerHTML;
+ document.getElementById("rollNo").value = selectedRow.cells[1].innerHTML;
+ document.getElementById("stdClass").value = selectedRow.cells[2].innerHTML;
+ document.getElementById("tsub").value = selectedRow.cells[3].innerHTML;
+ document.getElementById("age").value = selectedRow.cells[4].innerHTML;
+}
+// Update Record
+function updateRecord(formData) {
+ selectedRow.cells[0].innerHTML = formData.userName;
+ selectedRow.cells[1].innerHTML = formData.rollNo;
+ selectedRow.cells[2].innerHTML = formData.stdClass;
+ selectedRow.cells[3].innerHTML = formData.tsub;
+ selectedRow.cells[4].innerHTML = formData.age;
+}
+// Delete Function
+function onDelete(td) {
+ if (confirm('Are you sure to delete this record ?')) {
+     row = td.parentElement.parentElement;
+     document.getElementById("stdlist").deleteRow(row.rowIndex);
+     resetForm();
+ }
+}
+// Check User validation
+function validate() {
+ isValid = true;
+ // userName validation
+ if (document.getElementById("userName").value == "") {
+     isValid = false;
+     document.getElementById("userNamevalidationError").classList.remove("hide");
+ } else {
+     isValid = true;
+     if (!document.getElementById("userNamevalidationError").classList.contains("hide"))
+     {
+         document.getElementById("userNamevalidationError").classList.add("hide");
+     }
+ }
+ // Roll No validation
+ if (document.getElementById("rollNo").value == "") {
+     isValid = false;
+     document.getElementById("rollNovalidationError").classList.remove("hide");
+ } else {
+     isValid = true;
+     if (!document.getElementById("rollNovalidationError").classList.contains("hide"))
+     {
+         document.getElementById("rollNovalidationError").classList.add("hide");
+     }
+ }
+ // Std class validation
+ if (document.getElementById("stdClass").value == "") {
+     isValid = false;
+     document.getElementById("stdClassvalidationError").classList.remove("hide");
+ } else {
+     isValid = true;
+     if (!document.getElementById("stdClassvalidationError").classList.contains("hide"))
+     {
+         document.getElementById("stdClassvalidationError").classList.add("hide");
+     }
+ }
+ // Tsub validation
+ if (document.getElementById("tsub").value == "") {
+     isValid = false;
+     document.getElementById("tsubvalidationError").classList.remove("hide");
+ } else {
+     isValid = true;
+     if (!document.getElementById("tsubvalidationError").classList.contains("hide"))
+     {
+         document.getElementById("tsubvalidationError").classList.add("hide");
+     }
+ }
+ // Age validation
+ if (document.getElementById("age").value == "") {
+     isValid = false;
+     document.getElementById("agevalidationError").classList.remove("hide");
+ } else {
+     isValid = true;
+     if (!document.getElementById("agevalidationError").classList.contains("hide"))
+     {
+         document.getElementById("agevalidationError").classList.add("hide");
+     }
+ }
+ return isValid;
+}
+//<button onclick="window.print()">Print this page</button>
+</script>
+
+
+
+
+    <div class="gallery">
+        <h1>Gallery</h1>
+        <div class="main-gallery">
+            <div class="inner-gallery">
+                <img src="images/gal1.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="images/gal2.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="images/gal3.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="images/gal4.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="images/gal5.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="images/gal6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="why-choseus">
+    <div class="main-chose">
+        <div class="inner-chose">
+            <img src="images/cute.jpg" alt="">
+        </div>
+
+        <div class="inner-chose">
+            <h1>why chose us </h1>
+
+            <div class="inner-chose-content">
+                <div class="main-inner-chose">
+                    <div class="chose-icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="icon-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae error explicabo possimus fugit fuga inventore tenetur natus, </p>
+                    </div>
+                </div>
+
+                <div class="main-inner-chose">
+                    <div class="chose-icon">
+                        <i class="fas fa-hospital-user"></i>
+                        
+                    </div>
+                    <div class="icon-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae error explicabo possimus fugit fuga inventore tenetur natus, </p>
+                    </div>
+                </div>
+
+                <div class="main-inner-chose">
+                    <div class="chose-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="icon-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae error explicabo possimus fugit fuga inventore tenetur natus, </p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="our-doctors">
+    <h1>Our special doctors</h1>
+
+    <div class="main-doctor">
+        <div class="inner-doctor">
+            <img src="images/gal3.jpg" alt="">
+            <div class="doc-icons">
+                <div class="fab fa-facebook"></div>
+                <div class="fab fa-twitter"></div>
+                <div class="fab fa-instagram"></div>
+                <div class="fab fa-linkedin"></div>
+            </div>
+        </div>
+
+        <div class="inner-doctor">
+            <img src="images/gal2.jpg" alt="">
+            <div class="doc-icons">
+                <div class="fab fa-facebook"></div>
+                <div class="fab fa-twitter"></div>
+                <div class="fab fa-instagram"></div>
+                <div class="fab fa-linkedin"></div>
+            </div>
+        </div>
+
+        <div class="inner-doctor">
+            <img src="images/gal5.jpg" alt="">
+            <div class="doc-icons">
+                <div class="fab fa-facebook"></div>
+                <div class="fab fa-twitter"></div>
+                <div class="fab fa-instagram"></div>
+                <div class="fab fa-linkedin"></div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="main-footer">
+        <div class="inner-footer">
+            <img src="images/logo.png" alt="">
+        </div>
+
+        <div class="inner-footer">
+            <h2>heading</h2>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+        </div>
+
+        <div class="inner-footer">
+            <h2>heading</h2>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+        </div>
+
+        <div class="inner-footer">
+            <h2>heading</h2>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- provide an exceptional patient experience
+<i class="fas fa-notes-medical"></i>
+<i class="fas fa-hospital-user"></i>
+<i class="fas fa-user-md"></i>
+-->
